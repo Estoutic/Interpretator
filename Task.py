@@ -25,16 +25,16 @@ def sfera(r):
         P = 3.14
         V = 4/3 * P * r**3 
         return V
-def binary(x):
+def binary(x:str,base:int):
     res = 0
-    c = 0
-    while ( x != 0):
-        r = x % 2
-        v = pow(10,c)
-        res += r * v
-        x //= 2
-        c += 1
-    return res
+    Number_strochka = x[::-1]
+    fer = 0
+    for i in Number_strochka:
+        num = int(i)
+        next_num = num * base ** fer
+        res += next_num
+        fer += 1 
+    return(res)
 
 
 
